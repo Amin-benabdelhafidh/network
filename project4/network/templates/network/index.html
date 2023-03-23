@@ -1,0 +1,63 @@
+{% extends "network/layout.html" %}
+<!--
+ Amin BenAbdelhafidh ............................. on Dec 26, 2022;
+ .................. Github: https://github.com/Amin-benabdelhafidh;
+ Github repository: https://github.com/Amin-benabdelhafidh/network;
+ ........................................."Social Network" Project; 
+-->
+{% block body %}
+
+    <main>
+        <!-- this page will contain user's profile -->
+        <div id="profile-informations-container">
+            <h5 id="username-profile"></h5>
+            <div id="follow-section">
+                <div class="inline"><h6 class="inline follow-labels">Followings:</h6><p id="followings" class="follow inline"></p></div>
+                <div class="inline"><h6 class="inline follow-labels">Followers:</h6><p id="followers" class="follow inline"></p></div>
+            </div>
+            <hr>
+        </div>
+
+        <!-- user will be able to write posts here -->
+        <div id="Post_manage">
+            <form id="post-form">
+                <textarea placeholder="Share what's in your mind..." id="post-content"></textarea>
+                <input type="submit" id="submit-post" value="Post" class="btn btn-primary block">
+            </form>
+        </div>
+
+        <!-- load a post in individual page -->
+        <div id="the-post">
+            <div class="EDcontainer">
+                <h4 id="post-username" class="username block"></h4>
+                <div id="ED-input">
+                    
+                </div>
+            </div>
+            <hr class="hr_element">
+            <p id="s-post-content" class="content block"></p>
+            <hr class="hr_element">
+            <i id="post-like-icon" class="bi bi-heart inline"></i>
+            <h6 id="post-like-number" class="likes inline"></h6>
+            <hr class="hr_element">
+            <div id="comment-container">
+                <div id="comment-form">
+                    <textarea name='comment' id="comment" placeholder="Write Your Comment..."></textarea>
+                    <input type="button" id="submit-comment" value="Comment">
+                </div>
+                <div id="comments"></div>
+            </div>
+        </div>
+
+        <!-- posts will appear in this page -->
+        <div id="posts">
+            <nav aria-label="Page navigation example" id="paginator">
+                <ul class="pagination justify-content-start">
+                  <li class="page-item" id="previous-li"><button class="page-link" id="previous">Previous</button></li>
+                  <li class="page-item" id="next-li"><button class="page-link" id="next">Next</button></li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+{% endblock %}
